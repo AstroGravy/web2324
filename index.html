@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=device-width">
+    <title>Home|Tae</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <h1>Today, we will learn about JavaScript :0</h1>
+    <h2>How to onclick events?</h2>
+    <p>Click <a href="https://www.google.com" target="_blank" onclick="alert('Have fun!')">here</a> to visit a special website...</p>
+    <button onclick="document.getElementById('change-text').innerHTML='Hello Javascript!'">Click me to change the text below</button>
+    <p id="change-text">We can change HTML with JS!</p>
+    <h2 id="date">We can use JS to display the date and time</h2>
+    <button style="font-size: 100px;" onclick="document.getElementById('date').innerHTML=Date()">
+        Click me for the date and time</button>
+        <p>Let's make a funciton</p>
+        <button onclick="pFun()">Click to run a function!</button>
+        <p id="p-fun"></p>
+        <button onclick="askName()">Click here to enter your name</button>
+        <p id="ask-name"></p>
+        <button onclick="askquestion()">Click here for a question!</button>
+        <p id="ask-question"></p>
+
+    <script>
+        //alert("Hello, world!\nWelcome to my website")
+    
+        function pFun() {
+            document.getElementById('p-fun').innerHTML='BOO! Suprise, there is text here!';
+            document.getElementById('p-fun').style.fontsize='30px';
+            document.getElementById('p-fun').style.color='red';
+            document.getElementById('p-fun').style.textAlign='center';
+        }
+        function askName() {
+            var namereturn = document.getElementById('ask-name');
+            var name = prompt('Please enter your name');
+            if (name=='') {
+                alert('Please try again');
+            } else {
+                namereturn.innerHTML='Hello '+name+'! Nice to eat you!';
+            }
+        }
+    </script>
+
+</body>
+
+
+</html>
